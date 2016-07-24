@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "933409947149",
+    "project_id": "styloholic-2016"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:933409947149:android:a73a87e6142a4074",
+        "android_client_info": {
+          "package_name": "com.example.abhishek.styloholic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "933409947149-f0vq7or2kh8hqr1kuv4stri9362g7qim.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.abhishek.styloholic",
+            "certificate_hash": "6D1A7C968AC7397983E140998411FE369C630A18"
+          }
+        },
+        {
+          "client_id": "933409947149-k1jl2e4f28vvtcmk55n7u3q7d0duq1ad.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABrJxHv8j9RfTM4zBpZiAM4PkYxxLZ8Rg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
