@@ -29,17 +29,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-//        mSignInButton = (SignInButton) findViewById(R.id.sign_in_button);
-//        mSignOutButton = (Button) findViewById(R.id.sign_out_button);
-//        mRevokeButton = (Button) findViewById(R.id.revoke_access_button);
-//        mStatus = (TextView) findViewById(R.id.sign_in_status);
-//
-//        findViewById(R.id.sign_in_button).setOnClickListener(this);
-//        mSignOutButton.setOnClickListener(this);
-//        mRevokeButton.setOnClickListener(this);
-//
-//        mGoogleApiClient = buildApiClient();
-
         // Views
         mStatusTextView = (TextView) findViewById(R.id.status);
 
@@ -52,27 +41,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 .requestEmail()
                 .build();
 
-        // [START build_client]
-        // Build a GoogleApiClient with access to the Google Sign-In API and the
-        // options specified by gso.
         mGoogleApiClient = new GoogleApiClient.Builder(this)
 //                .enableAutoManage(this /* FragmentActivity */, this /* OnConnectionFailedListener */)
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
-        // [END build_client]
 
     }
 
-//    GoogleApiClient buildApiClient() {
-//        return new GoogleApiClient.Builder(this)
-//                .addConnectionCallbacks(this)
-//                .addOnConnectionFailedListener(this)
-//                .addApi(Plus.API, Plus.PlusOptions.builder().build())
-//                .addScope(new Scope(Scopes.PROFILE))
-//                .build();
-//    }
-
-    // [START signIn]
     private void signIn() {
 //        Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
 //        startActivityForResult(signInIntent, RC_SIGN_IN);
