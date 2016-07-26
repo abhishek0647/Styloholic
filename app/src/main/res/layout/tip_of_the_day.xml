@@ -27,7 +27,7 @@
         android:layout_weight="6"
         android:id="@+id/fashionWomen"
         android:scaleType="fitXY"
-        android:src="@drawable/gokarna"
+        android:src="@drawable/fashion_men"
         />
 
     <TextView

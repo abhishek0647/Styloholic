@@ -49,9 +49,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void signIn() {
-//        Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
-//        startActivityForResult(signInIntent, RC_SIGN_IN);
-        Intent intent = new Intent(LoginActivity.this, SplashActivity.class);
+        Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
+        startActivityForResult(signInIntent, RC_SIGN_IN);
+        Intent intent = new Intent(LoginActivity.this, TipOfTheDayActivity.class);
         startActivity(intent);
     }
     // [END signIn]
