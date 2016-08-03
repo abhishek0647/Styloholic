@@ -19,6 +19,32 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
         -->
 
+    <Button
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gplus_login_icon"
+        android:textColor="#FFFFFF"
+        android:gravity="center|center_vertical"
+        android:text="Sign In"
+        android:textAllCaps="false"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="40dp"></Button>
+
+    <Button
+        android:id="@+id/fb_sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fb_login_icon"
+        android:textColor="#FFFFFF"
+        android:gravity="center|center_vertical"
+        android:text="Sign In"
+        android:textAllCaps="false"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="100dp"></Button>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,32 +58,6 @@
             <!--android:background="@drawable/gplus_login_icon"-->
             <!--/>-->
 
-        <Button
-            android:id="@+id/sign_in_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/gplus_login_icon"
-            android:textColor="#FFFFFF"
-            android:gravity="center|center_vertical"
-            android:text="Sign In"
-            android:textAllCaps="false"></Button>
-
-        <Button
-            android:id="@+id/sign_out_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sign Out"
-            android:enabled="true"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/revoke_access_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Revoke Access"
-            android:enabled="true"
-            android:textAllCaps="false"/>
-
         <TextView
             android:id="@+id/sign_in_status"
             android:layout_width="wrap_content"
@@ -66,13 +66,31 @@
             android:text="" />
 
     </LinearLayout>
-    
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/status"
-        android:layout_marginBottom="30dp"
-        android:text=""
-        />
+
+    <!--<Button-->
+        <!--android:id="@+id/sign_out_button"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Sign Out"-->
+        <!--android:enabled="true"-->
+        <!--android:textAllCaps="false"-->
+        <!--/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/status"-->
+        <!--android:layout_marginBottom="30dp"-->
+        <!--android:text=""-->
+        <!--/>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/revoke_access_button"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Revoke Access"-->
+        <!--android:enabled="true"-->
+        <!--android:textAllCaps="false"-->
+        <!--/>-->
 
 </LinearLayout>

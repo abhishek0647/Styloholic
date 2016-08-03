@@ -47,13 +47,13 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         setContentView(R.layout.activity_login);
 
         mSignInButton = (Button) findViewById(R.id.sign_in_button);
-        mSignOutButton = (Button) findViewById(R.id.sign_out_button);
-        mRevokeButton = (Button) findViewById(R.id.revoke_access_button);
+//        mSignOutButton = (Button) findViewById(R.id.sign_out_button);
+//        mRevokeButton = (Button) findViewById(R.id.revoke_access_button);
         mStatus = (TextView) findViewById(R.id.sign_in_status);
 
         mSignInButton.setOnClickListener(this);
-        mSignOutButton.setOnClickListener(this);
-        mRevokeButton.setOnClickListener(this);
+//        mSignOutButton.setOnClickListener(this);
+//        mRevokeButton.setOnClickListener(this);
 
         mGoogleApiClient = buildApiClient();
     }
@@ -97,8 +97,8 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 
         // Update the user interface to reflect that the user is signed in.
         mSignInButton.setEnabled(false);
-        mSignOutButton.setEnabled(true);
-        mRevokeButton.setEnabled(true);
+//        mSignOutButton.setEnabled(true);
+//        mRevokeButton.setEnabled(true);
 
         // Indicate that the sign in process is complete.
         mSignInProgress = SIGNED_IN;
@@ -110,6 +110,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             ////mStatus.setText(String.format("Signed In to G+ as %s", currentUser.getDisplayName()));
             String emailAddress = Plus.AccountApi.getAccountName(mGoogleApiClient);
             mStatus.setText(String.format("Signed In to My App as %s", emailAddress));
+            Log.i( TAG, "Signed In to My App as " + emailAddress );
         }
         catch(Exception ex){
             String exception = ex.getLocalizedMessage();
@@ -203,8 +204,8 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     private void onSignedOut() {
         // Update the UI to reflect that the user is signed out.
         mSignInButton.setEnabled(true);
-        mSignOutButton.setEnabled(false);
-        mRevokeButton.setEnabled(false);
+//        mSignOutButton.setEnabled(false);
+//        mRevokeButton.setEnabled(false);
 
         mStatus.setText("Signed out");
 
@@ -218,28 +219,32 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             switch (v.getId()) {
                 case R.id.sign_in_button:
                     mStatus.setText("Signing In");
+//                    String testEmailAddress = Plus.AccountApi.getAccountName(mGoogleApiClient);
+//                    Log.i( TAG, "Signed In to My App as " + testEmailAddress );
+                    Intent intent = new Intent(LoginActivity.this, TipOfTheDayActivity.class);
+                    startActivity(intent);
                     resolveSignInError();
                     break;
-                case R.id.sign_out_button:
-                    // We clear the default account on sign out so that Google Play
-                    // services will not return an onConnected callback without user
-                    // interaction.
-                    Plus.AccountApi.clearDefaultAccount(mGoogleApiClient);
-                    mGoogleApiClient.disconnect();
-                    mGoogleApiClient.connect();
-                    break;
-                case R.id.revoke_access_button:
-                    // After we revoke permissions for the user with a GoogleApiClient
-                    // instance, we must discard it and create a new one.
-                    Plus.AccountApi.clearDefaultAccount(mGoogleApiClient);
-                    // Our sample has caches no user data from Google+, however we
-                    // would normally register a callback on revokeAccessAndDisconnect
-                    // to delete user data so that we comply with Google developer
-                    // policies.
-                    Plus.AccountApi.revokeAccessAndDisconnect(mGoogleApiClient);
-                    mGoogleApiClient = buildApiClient();
-                    mGoogleApiClient.connect();
-                    break;
+//                case R.id.sign_out_button:
+//                    // We clear the default account on sign out so that Google Play
+//                    // services will not return an onConnected callback without user
+//                    // interaction.
+//                    Plus.AccountApi.clearDefaultAccount(mGoogleApiClient);
+//                    mGoogleApiClient.disconnect();
+//                    mGoogleApiClient.connect();
+//                    break;
+//                case R.id.revoke_access_button:
+//                    // After we revoke permissions for the user with a GoogleApiClient
+//                    // instance, we must discard it and create a new one.
+//                    Plus.AccountApi.clearDefaultAccount(mGoogleApiClient);
+//                    // Our sample has caches no user data from Google+, however we
+//                    // would normally register a callback on revokeAccessAndDisconnect
+//                    // to delete user data so that we comply with Google developer
+//                    // policies.
+//                    Plus.AccountApi.revokeAccessAndDisconnect(mGoogleApiClient);
+//                    mGoogleApiClient = buildApiClient();
+//                    mGoogleApiClient.connect();
+//                    break;
             }
         }
     }
