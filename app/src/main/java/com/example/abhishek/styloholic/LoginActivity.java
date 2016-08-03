@@ -3,7 +3,6 @@ package com.example.abhishek.styloholic;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -30,8 +29,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);
+//        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+//        setSupportActionBar(myToolbar);
 
         // Views
         mStatusTextView = (TextView) findViewById(R.id.status);
@@ -55,7 +54,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void signIn() {
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(signInIntent, RC_SIGN_IN);
-        Intent intent = new Intent(LoginActivity.this, ScrollingActivity.class);
+        Intent intent = new Intent(LoginActivity.this, TipOfTheDayActivity.class);
         startActivity(intent);
     }
     // [END signIn]

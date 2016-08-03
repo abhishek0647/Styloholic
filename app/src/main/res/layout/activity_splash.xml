@@ -12,17 +12,6 @@
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
 
-    <!--
-    <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-        -->
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,33 +23,11 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/SplashScreen"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/fashionWomen"
-                android:src="@drawable/fashion_women"
-                android:layout_marginTop="-60dp"
-                android:layout_marginLeft="35dp"
-                android:layout_marginRight="35dp"
-                android:layout_marginBottom="-110dp"
-                />
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/glamin"
-                android:src="@drawable/glam_in_text"
-                android:layout_marginRight="35dp"
-                android:layout_marginLeft="35dp"
-                android:layout_marginTop="-100dp"
-                android:layout_marginBottom="-140dp" />
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/fashionMen"
-                android:src="@drawable/fashion_men"
-                android:layout_marginRight="35dp"
-                android:layout_marginLeft="35dp"
-                android:layout_marginBottom="5dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/splash_screen"
+                android:scaleType="fitXY"
                 />
         </LinearLayout>
     </FrameLayout>
