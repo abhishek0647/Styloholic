@@ -94,6 +94,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     public void onConnected(Bundle connectionHint) {
         // Reaching onConnected means we consider the user signed in.
         Log.i(TAG, "onConnected");
+        Log.i(TAG, "Signed in successfully");
 
         // Update the user interface to reflect that the user is signed in.
         mSignInButton.setEnabled(false);
